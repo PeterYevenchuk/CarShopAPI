@@ -1,0 +1,5 @@
+D:\MyCodeC#.NET\Git\CarShopAPI\BLL\obj\Debug\net7.0\BLL.csproj.AssemblyReference.cache
+D:\MyCodeC#.NET\Git\CarShopAPI\BLL\obj\Debug\net7.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyCodeC#.NET\Git\CarShopAPI\BLL\obj\Debug\net7.0\BLL.AssemblyInfoInputs.cache
+D:\MyCodeC#.NET\Git\CarShopAPI\BLL\obj\Debug\net7.0\BLL.AssemblyInfo.cs
+D:\MyCodeC#.NET\Git\CarShopAPI\BLL\obj\Debug\net7.0\BLL.csproj.CoreCompileInputs.cache
