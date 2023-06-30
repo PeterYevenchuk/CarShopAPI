@@ -1,5 +1,6 @@
 ﻿using DAL.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CarShop.Data_Access_Layer;
@@ -20,5 +21,31 @@ public class CarsDbContext : DbContext
         //Command for terminal
         //dotnet ef --project D:\MyCodeC#.NET\Git\CarShopAPI\DAL migrations add InitialMigration
         //dotnet ef migrations remove
+    }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        // Foreign key for table CarPhoto
+        modelBuilder.Entity<CarPhoto>()
+            .HasOne(p => p.Car)
+            .WithMany(c => c.Photos)
+            .HasForeignKey(p => p.IdCar)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        // Foreign key for the Order table
+        modelBuilder.Entity<Order>()
+            .HasOne(o => o.User)
+            .WithMany()
+            .HasForeignKey(o => o.IdUser)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<Order>()
+            .HasOne(o => o.Car)
+            .WithMany()
+            .HasForeignKey(o => o.IdCar)
+            .OnDelete(DeleteBehavior.Cascade);
+
     }
 }

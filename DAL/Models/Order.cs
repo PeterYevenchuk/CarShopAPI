@@ -9,10 +9,12 @@ namespace DAL.Models;
 
 public class Order
 {
-    public int Id { get; set; }
-    public int IdUser { get; set; }
-    public int IdCar { get; set; }
+    public Guid Id { get; set; }
+    public Guid IdUser { get; set; }
+    public Guid IdCar { get; set; }
     public int CountCars { get; set; }
     public decimal TotalPrice { get; set; }
     public DateTime DateOrdered { get; set; }
+    public User User { get; set; }
+    public Car Car { get; set; }
 }

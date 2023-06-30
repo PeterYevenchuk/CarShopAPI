@@ -687,6 +687,23 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
+      "BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "DAL": "1.0.0",
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "7.0.8",
+          "Microsoft.EntityFrameworkCore": "7.0.8",
+          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.8",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BLL.dll": {}
+        }
+      },
       "DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -1796,6 +1813,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "BLL/1.0.0": {
+      "type": "project",
+      "path": "../BLL/BLL.csproj",
+      "msbuildProject": "../BLL/BLL.csproj"
+    },
     "DAL/1.0.0": {
       "type": "project",
       "path": "../DAL/DAL.csproj",
@@ -1804,6 +1826,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "BLL >= 1.0.0",
       "DAL >= 1.0.0",
       "Microsoft.AspNetCore.Cryptography.KeyDerivation >= 7.0.8",
       "Microsoft.AspNetCore.OpenApi >= 7.0.8",
@@ -1847,6 +1870,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\BLL.csproj": {
+              "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\BLL.csproj"
+            },
             "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\DAL.csproj": {
               "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\DAL.csproj"
             }

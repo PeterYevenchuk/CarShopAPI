@@ -8,7 +8,8 @@ namespace DAL.Models;
 
 public class CarPhoto
 {
-    public int Id { get; set; }
-    public int IdCar { get; set; }
+    public Guid Id { get; set; }
+    public Guid IdCar { get; set; }
     public string URLPhoto { get; set; }
+    public Car Car { get; set; }
 }

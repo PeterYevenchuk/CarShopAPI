@@ -54,7 +54,6 @@ D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\obj\Debug\net7.0\CarShopAPI.GeneratedM
 D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\obj\Debug\net7.0\CarShopAPI.AssemblyInfoInputs.cache
 D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\obj\Debug\net7.0\CarShopAPI.AssemblyInfo.cs
 D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\obj\Debug\net7.0\CarShopAPI.csproj.CoreCompileInputs.cache
-D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\obj\Debug\net7.0\CarShopAPI.MvcApplicationPartsAssemblyInfo.cs
 D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\obj\Debug\net7.0\CarShopAPI.MvcApplicationPartsAssemblyInfo.cache
 D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\obj\Debug\net7.0\staticwebassets\msbuild.CarShopAPI.Microsoft.AspNetCore.StaticWebAssets.props
 D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\obj\Debug\net7.0\staticwebassets\msbuild.build.CarShopAPI.props
@@ -74,3 +73,8 @@ D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\Humanizer.dll
 D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
 D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\Mono.TextTemplating.dll
 D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\System.CodeDom.dll
+D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\BLL.deps.json
+D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\BLL.runtimeconfig.json
+D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\BLL.exe
+D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\BLL.dll
+D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\BLL.pdb

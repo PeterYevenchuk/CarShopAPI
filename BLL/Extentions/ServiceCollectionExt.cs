@@ -12,7 +12,7 @@ public static class ServiceCollectionExt
     {
         //services.AddScoped<IOrderService, OrderService>();
         //services.AddScoped<PaymentSystem>();
-        //services.AddScoped<IPasswordHash, PasswordHash>();
+        services.AddScoped<IPasswordHash, PasswordHash>();
 
         return services;
     }
