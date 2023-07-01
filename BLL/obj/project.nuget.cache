@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6vyKoFaOtVVHYtMyrdglG4i1u5K38bC4mc6aF1dm3jfogiNPS2Q0KdFa5V4PdXM9J+IISNu0BUcZ/gmWE+IUlQ==",
+  "dgSpecHash": "nP46+NOcR1MR/kzfYdX/YaOIFdDggAie3LtcY64yEg4YnVujNZA4PgT4ZP30dCux3I6cxNEvJwNh0goq7MXJoA==",
   "success": true,
   "projectFilePath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\BLL.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.8\\microsoft.entityframeworkcore.relational.7.0.8.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\7.0.8\\microsoft.entityframeworkcore.sqlite.7.0.8.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\7.0.8\\microsoft.entityframeworkcore.sqlite.core.7.0.8.nupkg.sha512",
+    "C:\\Users\\petro\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.8\\microsoft.entityframeworkcore.tools.7.0.8.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",

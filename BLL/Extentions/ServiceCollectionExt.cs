@@ -1,6 +1,4 @@
 ﻿using BLL.Helpers.PasswordHasher;
-using BLL.services.DeliveryOrder;
-using BLL.services.DeliveryOrderProces;
 using BLL.Services.PaymentSystem;
 using Microsoft.Extensions.DependencyInjection;
 

@@ -15,12 +15,8 @@ public class CarsDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source = cars.db");
         optionsBuilder.ReplaceService<IMigrationsSqlGenerator, SqliteMigrationsSqlGenerator>();
-
-        //Command for terminal
-        //dotnet ef --project D:\MyCodeC#.NET\Git\CarShopAPI\DAL migrations add InitialMigration
-        //dotnet ef migrations remove
+        optionsBuilder.UseSqlite("Data Source = cars.db");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

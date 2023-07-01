@@ -15,6 +15,9 @@ public static class ServiceCollectionExt
         services.AddScoped<CarsDbContext>();
         services.AddScoped<IService<User>, UserService>();
         services.AddScoped<IService<Admin>, AdminService>();
+        services.AddScoped<IService<Car>, CarService>();
+        services.AddScoped<IService<Order>, OrderService>();
+        services.AddScoped<IService<CarPhoto>, CarPhotoService>();
 
         return services;
     }

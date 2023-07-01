@@ -6,10 +6,14 @@ using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
+using (var context = new CarsDbContext())
+{
+    context.Database.Migrate();
+}
+
 // Add services to the container.
 builder.Services.AddDALServices();
 builder.Services.AddBLLServices();
-
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

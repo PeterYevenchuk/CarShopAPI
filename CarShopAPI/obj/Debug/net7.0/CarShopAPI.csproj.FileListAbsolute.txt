@@ -78,3 +78,4 @@ D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\BLL.runtimeconfig.jso
 D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\BLL.exe
 D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\BLL.dll
 D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\BLL.pdb
+D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\obj\Debug\net7.0\CarShopAPI.MvcApplicationPartsAssemblyInfo.cs

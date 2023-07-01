@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/epZ68AO6IHI9bBE269/KRNL+PGufM3dtf9xukNbuD0LrRhwiQQ2mf4WsbvuIMf+JSI5IM3Ef8EBThFHLxJeNw==",
+  "dgSpecHash": "F6dGM/iUGGFRzIq9SBdrcly88/OWTUXHjMIjHePjm+58ht2cXcUsTGVs44vVGKevKWGRWLqij/+Yw93pQ5sKsQ==",
   "success": true,
   "projectFilePath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\CarShopAPI\\CarShopAPI.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.8\\microsoft.entityframeworkcore.relational.7.0.8.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\7.0.8\\microsoft.entityframeworkcore.sqlite.7.0.8.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\7.0.8\\microsoft.entityframeworkcore.sqlite.core.7.0.8.nupkg.sha512",
+    "C:\\Users\\petro\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.8\\microsoft.entityframeworkcore.tools.7.0.8.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
