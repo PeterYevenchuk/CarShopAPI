@@ -8,6 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Services\SearchingServices\**" />
+    <EmbeddedResource Remove="Services\SearchingServices\**" />
+    <None Remove="Services\SearchingServices\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Services\SearchingServices\SearchingAdminService.cs" />
+    <Compile Include="Services\SearchingServices\SearchingUserService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj" />
   </ItemGroup>
 
