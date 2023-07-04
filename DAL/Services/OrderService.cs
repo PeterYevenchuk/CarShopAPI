@@ -61,11 +61,10 @@ public class OrderService : IService<Order>
         var existingOrder = _context.Orders.FirstOrDefault(a => a.Id == entity.Id);
         if (existingOrder != null)
         {
-            existingOrder.IdUser = entity.IdUser;
-            existingOrder.IdCar = entity.IdCar;
             existingOrder.CountCars = entity.CountCars;
             existingOrder.TotalPrice = entity.TotalPrice;
             existingOrder.DateOrdered = entity.DateOrdered;
+            existingOrder.Car = entity.Car;
             _context.SaveChanges();
 
             return true;

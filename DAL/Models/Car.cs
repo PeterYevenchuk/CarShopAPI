@@ -15,5 +15,4 @@ public class Car
     public string Category { get; set; }
     public int Count { get; set; }
     public decimal Price { get; set; }
-    public List<CarPhoto> Photos { get; set; }
 }

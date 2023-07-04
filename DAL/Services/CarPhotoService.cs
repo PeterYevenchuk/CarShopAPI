@@ -63,8 +63,8 @@ public class CarPhotoService : IService<CarPhoto>
             var carPhoto = _context.CarPhotos.FirstOrDefault(a => a.Id == entity.Id);
             if (carPhoto != null)
             {
-                carPhoto.IdCar = entity.IdCar;
                 carPhoto.URLPhoto = entity.URLPhoto;
+                carPhoto.Car = entity.Car;
                 _context.SaveChanges();
 
                 return true;

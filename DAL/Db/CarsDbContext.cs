@@ -26,21 +26,18 @@ public class CarsDbContext : DbContext
         // Foreign key for table CarPhoto
         modelBuilder.Entity<CarPhoto>()
             .HasOne(p => p.Car)
-            .WithMany(c => c.Photos)
-            .HasForeignKey(p => p.IdCar)
+            .WithMany()
             .OnDelete(DeleteBehavior.Cascade);
 
         // Foreign key for the Order table
         modelBuilder.Entity<Order>()
             .HasOne(o => o.User)
             .WithMany()
-            .HasForeignKey(o => o.IdUser)
             .OnDelete(DeleteBehavior.Cascade);
 
         modelBuilder.Entity<Order>()
             .HasOne(o => o.Car)
             .WithMany()
-            .HasForeignKey(o => o.IdCar)
             .OnDelete(DeleteBehavior.Cascade);
 
     }
