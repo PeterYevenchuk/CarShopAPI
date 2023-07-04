@@ -60,15 +60,6 @@ public class AdminController : ControllerBase
         return StatusCode(500, "Password write not correct!");
     }
 
-    [HttpDelete("{id}")]
-    public ActionResult Delete(Guid id)
-    {
-        bool result = _adminService.Delete(id);
-        if (result) return Ok();
-        return NotFound();
-
-    }
-
     [HttpPut("update")]
     public ActionResult Update(Admin admin)
     {
@@ -93,5 +84,14 @@ public class AdminController : ControllerBase
             return BadRequest();
         }
         return StatusCode(500, "New password write not correct!");
+    }
+
+    [HttpDelete("{id}")]
+    public ActionResult Delete(Guid id)
+    {
+        bool result = _adminService.Delete(id);
+        if (result) return Ok();
+        return NotFound();
+
     }
 }
