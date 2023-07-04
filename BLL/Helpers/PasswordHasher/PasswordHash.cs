@@ -9,28 +9,14 @@ public class PasswordHash : IPasswordHash
     private const int HashSize = 32;
     private const int Iterations = 10000;
 
-    public string EncryptPassword(string password)
+    public string EncryptPassword(string password, byte[] salt)
     {
-        // Random salt generation
-        byte[] salt = new byte[SaltSize];
-        using (var rng = RandomNumberGenerator.Create())
-        {
-            rng.GetBytes(salt);
-        }
-
-        // Password hash generation
-        byte[] hash = KeyDerivation.Pbkdf2(
+        byte[] byteArray = { 3, 9, 1 };
+        return Convert.ToBase64String(KeyDerivation.Pbkdf2(
             password: password,
-            salt: salt,
+            salt: byteArray,
             prf: KeyDerivationPrf.HMACSHA256,
-            iterationCount: Iterations,
-            numBytesRequested: HashSize
-        );
-
-        byte[] hashWithSalt = new byte[SaltSize + HashSize];
-        Buffer.BlockCopy(salt, 0, hashWithSalt, 0, SaltSize);
-        Buffer.BlockCopy(hash, 0, hashWithSalt, SaltSize, HashSize);
-
-        return Convert.ToBase64String(hashWithSalt);
+            iterationCount: 1000000,
+            numBytesRequested: 256 / 8));
     }
 }

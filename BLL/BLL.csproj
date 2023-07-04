@@ -15,6 +15,8 @@
 
   <ItemGroup>
     <Compile Include="Services\SearchingServices\SearchingAdminService.cs" />
+    <Compile Include="Services\SearchingServices\SearchingCarService.cs" />
+    <Compile Include="Services\SearchingServices\SearchingOrderService.cs" />
     <Compile Include="Services\SearchingServices\SearchingUserService.cs" />
   </ItemGroup>
 

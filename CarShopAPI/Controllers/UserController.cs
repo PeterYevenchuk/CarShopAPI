@@ -1,4 +1,7 @@
-﻿using BLL.Helpers.PasswordHasher;
+﻿using BLL.Helpers.EmailValidation;
+using BLL.Helpers.PasswordHasher;
+using BLL.Helpers.PasswordValidation;
+using BLL.Services.ChangePasswordServices;
 using DAL.Db;
 using DAL.Models;
 using DAL.Services;
@@ -10,13 +13,15 @@ namespace CarShopAPI.Controllers;
 [Route("api/[controller]")]
 public class UserController : ControllerBase
 {
+    private readonly ChangeUserPasswordService _changeUserPasswordService;
     private readonly IService<User> _userService;
     private readonly IPasswordHash _hasher;
 
-    public UserController(IService<User> userService, IPasswordHash hasher)
+    public UserController(IService<User> userService, IPasswordHash hasher, ChangeUserPasswordService changeUserPasswordService)
     {
         _userService = userService;
         this._hasher = hasher;
+        _changeUserPasswordService = changeUserPasswordService;
     }
 
     [HttpGet]
@@ -39,10 +44,18 @@ public class UserController : ControllerBase
     [HttpPost("save")]
     public ActionResult Insert(User user)
     {
-        user.Password = _hasher.EncryptPassword(user.Password);
-        bool result = _userService.Insert(user);
-        if (result) return Ok();
-        return BadRequest();
+        if (PasswordValid.IsValidatePassword(user.Password))
+        {
+            user.Password = _hasher.EncryptPassword(user.Password, user.Id.ToByteArray());
+            if (EmailValid.IsValidEmail(user.Email))
+            {
+                bool result = _userService.Insert(user);
+                if (result) return Ok();
+                return BadRequest();
+            }
+            return StatusCode(500, "Email write not correct!");
+        }
+        return StatusCode(500, "Password write not correct!");
     }
 
     [HttpDelete("{id}")]
@@ -57,8 +70,26 @@ public class UserController : ControllerBase
     [HttpPut("update")]
     public ActionResult Update(User user)
     {
-        bool result = _userService.Update(user);
-        if (result) return Ok();
-        return NotFound();
+        if (EmailValid.IsValidEmail(user.Email))
+        {
+            bool result = _userService.Update(user);
+            if (result) return Ok();
+            return NotFound();
+        }
+        return BadRequest();
+    }
+
+    [HttpPut("changepassword")]
+    public ActionResult ChangePassword(Guid id, string newPassword, string oldPassword)
+    {
+        if (PasswordValid.IsValidatePassword(newPassword))
+        {
+            newPassword = _hasher.EncryptPassword(newPassword, id.ToByteArray());
+            oldPassword = _hasher.EncryptPassword(oldPassword, id.ToByteArray());
+            bool result = _changeUserPasswordService.ChangePassword(id, newPassword, oldPassword);
+            if (result) return Ok();
+            return BadRequest();
+        }
+        return StatusCode(500, "New password write not correct!");
     }
 }

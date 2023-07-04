@@ -70,8 +70,9 @@ public class AdminService : IService<Admin>
             var admin = _context.Admins.FirstOrDefault(a => a.Id == entity.Id);
             if (admin != null)
             {
+                admin.Name = entity.Name;
+                admin.LastName = entity.LastName;
                 admin.Login = entity.Login;
-                admin.Password = entity.Password;
                 admin.Email = entity.Email;
                 _context.SaveChanges();
                 return true;
