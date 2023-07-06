@@ -13,7 +13,10 @@ public class Order
     public int CountCars { get; set; }
     public decimal TotalPrice { get; set; }
     public DateTime DateOrdered { get; set; }
-    public User User { get; set; }
+    public Guid? UserId { get; set; }
+    public Guid? CarId { get; set; }
+    public Guid? AdditionalFunctionalityId { get; set; }
     public Car Car { get; set; }
+    public User User { get; set; }
     public AdditionalFunctionality AdditionalFunctionality { get; set; }
 }

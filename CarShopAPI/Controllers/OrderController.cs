@@ -10,10 +10,12 @@ namespace CarShopAPI.Controllers;
 public class OrderController : ControllerBase
 {
     private readonly IService<Order> _orderService;
+    private readonly IService<OrderDTO> _orderDTOService;
 
-    public OrderController(IService<Order> orderService)
+    public OrderController(IService<Order> orderService, IService<OrderDTO> orderDTOService)
     {
         _orderService = orderService;
+        _orderDTOService = orderDTOService;
     }
 
     [HttpGet]
@@ -32,9 +34,9 @@ public class OrderController : ControllerBase
     }
 
     [HttpPost("save")]
-    public ActionResult<Order> Insert(Order order)
+    public ActionResult<Order> Insert(OrderDTO order)
     {
-        bool result = _orderService.Insert(order);
+        bool result = _orderDTOService.Insert(order);
         if (result) return Ok(order);
         return BadRequest();
     }

@@ -1,6 +1,7 @@
 ﻿using CarShop.Data_Access_Layer;
 using DAL.Db;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,12 +34,18 @@ public class CarPhotoService : IService<CarPhoto>
 
     public List<CarPhoto> Get()
     {
-        return _context.CarPhotos.ToList();
+        return _context.CarPhotos
+        .Include(o => o.Car)
+        .ToList();
     }
 
     public CarPhoto? GetById(Guid id)
     {
-        return _context.CarPhotos.FirstOrDefault(a => a.Id == id);
+        var carPhoto = _context.CarPhotos
+        .Include(o => o.Car)
+        .FirstOrDefault(a => a.Id == id);
+
+        return carPhoto;
     }
 
     public bool Insert(CarPhoto entity)

@@ -29,22 +29,26 @@ public class CarsDbContext : DbContext
         modelBuilder.Entity<CarPhoto>()
             .HasOne(p => p.Car)
             .WithMany()
+            .HasForeignKey("CarId")
             .OnDelete(DeleteBehavior.Cascade);
 
         // Foreign key for the Order table
         modelBuilder.Entity<Order>()
             .HasOne(o => o.User)
             .WithMany()
-            .OnDelete(DeleteBehavior.Cascade);
+            .HasForeignKey("UserId")
+            .OnDelete(DeleteBehavior.Restrict);
 
         modelBuilder.Entity<Order>()
             .HasOne(o => o.Car)
             .WithMany()
-            .OnDelete(DeleteBehavior.Cascade);
+            .HasForeignKey("CarId")
+            .OnDelete(DeleteBehavior.Restrict);
 
         modelBuilder.Entity<Order>()
             .HasOne(o => o.AdditionalFunctionality)
             .WithMany()
+            .HasForeignKey("AdditionalFunctionalityId")
             .OnDelete(DeleteBehavior.Cascade);
     }
 }

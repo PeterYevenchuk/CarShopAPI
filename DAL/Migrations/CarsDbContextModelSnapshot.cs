@@ -139,11 +139,12 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("DAL.Models.CarPhoto", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid>("CarId")
+                    b.Property<Guid?>("CarId")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("URLPhoto")
@@ -163,10 +164,12 @@ namespace DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid>("AdditionalFunctionalityId")
+                    b.Property<Guid?>("AdditionalFunctionalityId")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid>("CarId")
+                    b.Property<Guid?>("CarId")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("CountCars")
@@ -178,7 +181,8 @@ namespace DAL.Migrations
                     b.Property<decimal>("TotalPrice")
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid>("UserId")
+                    b.Property<Guid?>("UserId")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -245,13 +249,13 @@ namespace DAL.Migrations
                     b.HasOne("DAL.Models.Car", "Car")
                         .WithMany()
                         .HasForeignKey("CarId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("DAL.Models.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("AdditionalFunctionality");

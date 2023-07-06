@@ -16,7 +16,7 @@ using (var context = new CarsDbContext())
     context.Database.Migrate();
 }
 
-builder.Services.Configure<JWTSettings>(builder.Configuration.GetSection("JWTSettings"));
+/*builder.Services.Configure<JWTSettings>(builder.Configuration.GetSection("JWTSettings"));
 
 var secretKey = builder.Configuration.GetSection("JWTSettings:SecretKey").Value;
 var issuer = builder.Configuration.GetSection("JWTSettings:Issuer").Value;
@@ -41,7 +41,7 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = signingKey,
         ValidateIssuerSigningKey = true
     };
-});
+});*/
 
 // Add services to the container.
 builder.Services.AddDALServices();

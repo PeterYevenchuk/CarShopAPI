@@ -1,6 +1,7 @@
 ﻿using CarShop.Data_Access_Layer;
 using DAL.Db;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,12 +34,22 @@ public class OrderService : IService<Order>
 
     public List<Order> Get()
     {
-        return _context.Orders.ToList();
+        return _context.Orders
+        .Include(o => o.User)
+        .Include(o => o.Car)
+        .Include(o => o.AdditionalFunctionality)
+        .ToList();
     }
 
     public Order? GetById(Guid id)
     {
-        return _context.Orders.FirstOrDefault(a => a.Id == id);
+        var order = _context.Orders
+        .Include(o => o.User)
+        .Include(o => o.Car)
+        .Include(o => o.AdditionalFunctionality)
+        .FirstOrDefault(a => a.Id == id);
+
+        return order;
     }
 
     public bool Insert(Order entity)
@@ -63,7 +74,6 @@ public class OrderService : IService<Order>
         {
             existingOrder.CountCars = entity.CountCars;
             existingOrder.TotalPrice = entity.TotalPrice;
-            existingOrder.DateOrdered = entity.DateOrdered;
             existingOrder.Car = entity.Car;
             existingOrder.User = entity.User;
             existingOrder.AdditionalFunctionality = entity.AdditionalFunctionality;

@@ -4,6 +4,9 @@ using BLL.Helpers.PasswordValidation;
 using BLL.Services.ChangePasswordServices;
 using BLL.Services.PaymentSystem;
 using BLL.Services.SearchingServices;
+using DAL.Db;
+using DAL.Models;
+using DAL.Services;
 using DAL.Services.SortingServices;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -14,6 +17,8 @@ public static class ServiceCollectionExt
     public static IServiceCollection AddBLLServices(this IServiceCollection services)
     {
         services.AddScoped<IPasswordHash, PasswordHash>();
+        services.AddScoped<IService<OrderDTO>, OrderDTOService>();
+        services.AddScoped<IService<CarPhotoDTO>, CarPhotoDTOService>();
         services.AddScoped<SearchingUserService>();
         services.AddScoped<SearchingAdminService>();
         services.AddScoped<SearchingCarService>();

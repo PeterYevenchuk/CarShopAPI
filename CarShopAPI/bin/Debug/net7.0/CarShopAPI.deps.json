@@ -11,6 +11,7 @@
           "BLL": "1.0.0",
           "DAL": "1.0.0",
           "DotNetEnv": "2.5.0",
+          "JWT": "10.0.2",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.8",
           "Microsoft.AspNetCore.Cryptography.KeyDerivation": "7.0.8",
           "Microsoft.AspNetCore.OpenApi": "7.0.8",
@@ -47,6 +48,18 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "JWT/10.0.2": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.2",
+          "System.Text.Json": "7.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/JWT.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.0.0"
           }
         }
       },
@@ -387,6 +400,14 @@
           "System.Threading.Timer": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "Newtonsoft.Json/13.0.2": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.2.27524"
+          }
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -1227,6 +1248,7 @@
         "dependencies": {
           "DAL": "1.0.0",
           "DotNetEnv": "2.5.0",
+          "JWT": "10.0.2",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.8",
           "Microsoft.AspNetCore.Cryptography.KeyDerivation": "7.0.8",
           "Microsoft.EntityFrameworkCore": "7.0.8",
@@ -1243,6 +1265,7 @@
       "DAL/1.0.0": {
         "dependencies": {
           "DotNetEnv": "2.5.0",
+          "JWT": "10.0.2",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.8",
           "Microsoft.AspNetCore.Cryptography.KeyDerivation": "7.0.8",
           "Microsoft.EntityFrameworkCore": "7.0.8",
@@ -1277,6 +1300,13 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "JWT/10.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dypI/0j5XVy0teQ9MEsxJLsk7DS26+HjsFfvX9wGMWdGbQfTgRZ1CaLfjVjJY/gxPhTkRKnZyiD6+j+HF9FAfw==",
+      "path": "jwt/10.0.2",
+      "hashPath": "jwt.10.0.2.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.8": {
       "type": "package",
@@ -1550,6 +1580,13 @@
       "sha512": "sha512-WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
       "path": "netstandard.library/1.6.1",
       "hashPath": "netstandard.library.1.6.1.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg==",
+      "path": "newtonsoft.json/13.0.2",
+      "hashPath": "newtonsoft.json.13.0.2.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",

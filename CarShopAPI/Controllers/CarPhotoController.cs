@@ -10,10 +10,12 @@ namespace CarShopAPI.Controllers;
 public class CarPhotoController : ControllerBase
 {
     private readonly IService<CarPhoto> _carPhotoService;
+    private readonly IService<CarPhotoDTO> _carPhotoDTOService;
 
-    public CarPhotoController(IService<CarPhoto> carPhotoService)
+    public CarPhotoController(IService<CarPhoto> carPhotoService, IService<CarPhotoDTO> carPhotoDTOService)
     {
         _carPhotoService = carPhotoService;
+        _carPhotoDTOService = carPhotoDTOService;
     }
 
     [HttpGet]
@@ -32,9 +34,9 @@ public class CarPhotoController : ControllerBase
     }
 
     [HttpPost("save")]
-    public ActionResult<CarPhoto> Insert(CarPhoto carPhoto)
+    public ActionResult<CarPhoto> Insert(CarPhotoDTO carPhoto)
     {
-        bool result = _carPhotoService.Insert(carPhoto);
+        bool result = _carPhotoDTOService.Insert(carPhoto);
         if (result) return Ok(carPhoto);
         return BadRequest();
     }

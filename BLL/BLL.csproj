@@ -14,6 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="Services\SearchingServices\CarPhotoDTOService.cs" />
+    <Compile Include="Services\SearchingServices\OrderDTOService.cs" />
     <Compile Include="Services\SearchingServices\SearchingAdminService.cs" />
     <Compile Include="Services\SearchingServices\SearchingCarService.cs" />
     <Compile Include="Services\SearchingServices\SearchingOrderService.cs" />
@@ -26,6 +28,7 @@
 
   <ItemGroup>
     <PackageReference Include="DotNetEnv" Version="2.5.0" />
+    <PackageReference Include="JWT" Version="10.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="7.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
