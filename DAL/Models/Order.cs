@@ -15,4 +15,5 @@ public class Order
     public DateTime DateOrdered { get; set; }
     public User User { get; set; }
     public Car Car { get; set; }
+    public AdditionalFunctionality AdditionalFunctionality { get; set; }
 }

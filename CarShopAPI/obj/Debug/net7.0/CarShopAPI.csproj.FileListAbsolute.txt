@@ -79,3 +79,13 @@ D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\BLL.exe
 D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\BLL.dll
 D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\BLL.pdb
 D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\obj\Debug\net7.0\CarShopAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\DotNetEnv.dll
+D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\Sprache.dll
+D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

@@ -17,6 +17,58 @@ namespace DAL.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.8");
 
+            modelBuilder.Entity("DAL.Models.AdditionalFunctionality", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Color")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("GPSNavigation")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("LeatherSeats")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("ParkingSensors")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("PremiumSoundSystem")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AdditionalFunctionalities");
+                });
+
+            modelBuilder.Entity("DAL.Models.AdditionalFunctionalityPrice", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("ColorPrice")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("GPSNavigationPrice")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("LeatherSeatsPrice")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("ParkingSensorsPrice")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("PremiumSoundSystemPrice")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AdditionalFunctionalityPrices");
+                });
+
             modelBuilder.Entity("DAL.Models.Admin", b =>
                 {
                     b.Property<Guid>("Id")
@@ -65,11 +117,19 @@ namespace DAL.Migrations
                     b.Property<int>("Count")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("DateCreated")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Model")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("Price")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("StandartColor")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -83,7 +143,7 @@ namespace DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid>("IdCar")
+                    b.Property<Guid>("CarId")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("URLPhoto")
@@ -92,7 +152,7 @@ namespace DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdCar");
+                    b.HasIndex("CarId");
 
                     b.ToTable("CarPhotos");
                 });
@@ -103,26 +163,31 @@ namespace DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+                    b.Property<Guid>("AdditionalFunctionalityId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("CarId")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("CountCars")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("DateOrdered")
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid>("IdCar")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid>("IdUser")
-                        .HasColumnType("TEXT");
-
                     b.Property<decimal>("TotalPrice")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("UserId")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdCar");
+                    b.HasIndex("AdditionalFunctionalityId");
 
-                    b.HasIndex("IdUser");
+                    b.HasIndex("CarId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Orders");
                 });
@@ -161,8 +226,8 @@ namespace DAL.Migrations
             modelBuilder.Entity("DAL.Models.CarPhoto", b =>
                 {
                     b.HasOne("DAL.Models.Car", "Car")
-                        .WithMany("Photos")
-                        .HasForeignKey("IdCar")
+                        .WithMany()
+                        .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -171,26 +236,29 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("DAL.Models.Order", b =>
                 {
+                    b.HasOne("DAL.Models.AdditionalFunctionality", "AdditionalFunctionality")
+                        .WithMany()
+                        .HasForeignKey("AdditionalFunctionalityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("DAL.Models.Car", "Car")
                         .WithMany()
-                        .HasForeignKey("IdCar")
+                        .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("DAL.Models.User", "User")
                         .WithMany()
-                        .HasForeignKey("IdUser")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("AdditionalFunctionality");
 
                     b.Navigation("Car");
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("DAL.Models.Car", b =>
-                {
-                    b.Navigation("Photos");
                 });
 #pragma warning restore 612, 618
         }

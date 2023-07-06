@@ -67,6 +67,8 @@ public class CarService : IService<Car>
                 car.Brand = entity.Brand;
                 car.Model = entity.Model;
                 car.Category = entity.Category;
+                car.DateCreated = entity.DateCreated;
+                car.StandartColor = entity.StandartColor;
                 car.Count = entity.Count;
                 car.Price = entity.Price;
                 _context.SaveChanges();

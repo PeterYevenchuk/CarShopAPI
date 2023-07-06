@@ -65,6 +65,8 @@ public class OrderService : IService<Order>
             existingOrder.TotalPrice = entity.TotalPrice;
             existingOrder.DateOrdered = entity.DateOrdered;
             existingOrder.Car = entity.Car;
+            existingOrder.User = entity.User;
+            existingOrder.AdditionalFunctionality = entity.AdditionalFunctionality;
             _context.SaveChanges();
 
             return true;

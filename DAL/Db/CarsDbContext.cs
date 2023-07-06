@@ -12,6 +12,8 @@ public class CarsDbContext : DbContext
     public DbSet<Order> Orders { get; set; }
     public DbSet<Admin> Admins { get; set; }
     public DbSet<CarPhoto> CarPhotos { get; set; }
+    public DbSet<AdditionalFunctionality> AdditionalFunctionalities { get; set; }
+    public DbSet<AdditionalFunctionalityPrice> AdditionalFunctionalityPrices { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -40,5 +42,9 @@ public class CarsDbContext : DbContext
             .WithMany()
             .OnDelete(DeleteBehavior.Cascade);
 
+        modelBuilder.Entity<Order>()
+            .HasOne(o => o.AdditionalFunctionality)
+            .WithMany()
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }
