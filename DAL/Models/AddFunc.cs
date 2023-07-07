@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Models;
 
-public class AdditionalFunctionality
+public class AddFunc
 {
     public Guid Id { get; set; }
     public string? Color { get; set; }

@@ -2,10 +2,11 @@
 using BLL.Helpers.PasswordHasher;
 using BLL.Helpers.PasswordValidation;
 using BLL.Services.ChangePasswordServices;
+using BLL.Services.DTOService;
 using BLL.Services.PaymentSystem;
 using BLL.Services.SearchingServices;
 using DAL.Db;
-using DAL.Models;
+using DAL.Models.ModelsDTO;
 using DAL.Services;
 using DAL.Services.SortingServices;
 using Microsoft.Extensions.DependencyInjection;

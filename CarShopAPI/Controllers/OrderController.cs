@@ -1,5 +1,6 @@
 ﻿using DAL.Db;
 using DAL.Models;
+using DAL.Models.ModelsDTO;
 using DAL.Services;
 using Microsoft.AspNetCore.Mvc;
 

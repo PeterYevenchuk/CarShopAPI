@@ -18,5 +18,5 @@ public class Order
     public Guid? AdditionalFunctionalityId { get; set; }
     public Car Car { get; set; }
     public User User { get; set; }
-    public AdditionalFunctionality AdditionalFunctionality { get; set; }
+    public AddFunc AdditionalFunctionality { get; set; }
 }

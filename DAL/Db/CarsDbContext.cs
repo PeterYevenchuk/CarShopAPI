@@ -12,8 +12,8 @@ public class CarsDbContext : DbContext
     public DbSet<Order> Orders { get; set; }
     public DbSet<Admin> Admins { get; set; }
     public DbSet<CarPhoto> CarPhotos { get; set; }
-    public DbSet<AdditionalFunctionality> AdditionalFunctionalities { get; set; }
-    public DbSet<AdditionalFunctionalityPrice> AdditionalFunctionalityPrices { get; set; }
+    public DbSet<AddFunc> AdditionalFunctionalities { get; set; }
+    public DbSet<AddFuncPrice> AdditionalFunctionalityPrices { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -37,18 +37,25 @@ public class CarsDbContext : DbContext
             .HasOne(o => o.User)
             .WithMany()
             .HasForeignKey("UserId")
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.SetNull);
 
         modelBuilder.Entity<Order>()
             .HasOne(o => o.Car)
             .WithMany()
             .HasForeignKey("CarId")
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.SetNull);
 
         modelBuilder.Entity<Order>()
             .HasOne(o => o.AdditionalFunctionality)
             .WithMany()
             .HasForeignKey("AdditionalFunctionalityId")
+            .OnDelete(DeleteBehavior.Restrict);
+
+        // Foreign key for the AdditionalFunctionalityPrice table
+        modelBuilder.Entity<AddFuncPrice>()
+            .HasOne(o => o.Car)
+            .WithMany()
+            .HasForeignKey("CarId")
             .OnDelete(DeleteBehavior.Cascade);
     }
 }

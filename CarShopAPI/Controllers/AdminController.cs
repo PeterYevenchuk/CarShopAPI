@@ -8,6 +8,7 @@ using System.Net;
 using BLL.Helpers.EmailValidation;
 using BLL.Helpers.PasswordValidation;
 using BLL.Services.ChangePasswordServices;
+using DAL.Models.ModelsDTO;
 
 namespace CarShopAPI.Controllers;
 
@@ -44,20 +45,26 @@ public class AdminController : ControllerBase
     }
 
     [HttpPost("save")]
-    public ActionResult Insert(Admin admin)
+    public ActionResult Insert(AdminDTO adminDTO)
     {
-        if (PasswordValid.IsValidatePassword(admin.Password))
+        if (PasswordValid.IsValidatePassword(adminDTO.Password) && EmailValid.IsValidEmail(adminDTO.Email))
         {
-            admin.Password = _hasher.EncryptPassword(admin.Password, admin.Id.ToByteArray());
-            if (EmailValid.IsValidEmail(admin.Email))
+            Admin admin = new Admin
             {
-                bool result = _adminService.Insert(admin);
-                if (result) return Ok();
-                return BadRequest();
-            }
-            return StatusCode(500, "Email write not correct!");
+                Id = Guid.NewGuid(),
+                Name = adminDTO.Name,
+                LastName = adminDTO.LastName,
+                Login = adminDTO.Login,
+                Email = adminDTO.Email,
+                Password = adminDTO.Password
+            };
+            admin.Password = _hasher.EncryptPassword(admin.Password, admin.Id.ToByteArray());
+            bool result = _adminService.Insert(admin);
+            if (result) return Ok();
+            return BadRequest();
+
         }
-        return StatusCode(500, "Password write not correct!");
+        return StatusCode(500, "Password or email write not correct!");
     }
 
     [HttpPut("update")]

@@ -14,8 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Services\SearchingServices\CarPhotoDTOService.cs" />
-    <Compile Include="Services\SearchingServices\OrderDTOService.cs" />
     <Compile Include="Services\SearchingServices\SearchingAdminService.cs" />
     <Compile Include="Services\SearchingServices\SearchingCarService.cs" />
     <Compile Include="Services\SearchingServices\SearchingOrderService.cs" />
@@ -49,6 +47,7 @@
 
   <ItemGroup>
     <Folder Include="Services\DeliveryOrderSystem\" />
+    <Folder Include="Services\NotificationSystem\" />
   </ItemGroup>
 
 </Project>

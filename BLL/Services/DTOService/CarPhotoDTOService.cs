@@ -1,6 +1,7 @@
 ﻿using CarShop.Data_Access_Layer;
 using DAL.Db;
 using DAL.Models;
+using DAL.Models.ModelsDTO;
 using DAL.Services;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.Services.SearchingServices;
+namespace BLL.Services.DTOService;
 
 public class CarPhotoDTOService : IService<CarPhotoDTO>
 {

@@ -18,6 +18,7 @@ public static class ServiceCollectionExt
         services.AddScoped<IService<Car>, CarService>();
         services.AddScoped<IService<Order>, OrderService>();
         services.AddScoped<IService<CarPhoto>, CarPhotoService>();
+        services.AddScoped<IService<AddFuncPrice>, AddFuncPriceService>();
 
         return services;
     }

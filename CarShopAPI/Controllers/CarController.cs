@@ -1,5 +1,6 @@
 ﻿using DAL.Db;
 using DAL.Models;
+using DAL.Models.ModelsDTO;
 using DAL.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -32,8 +33,19 @@ public class CarController : ControllerBase
     }
 
     [HttpPost("save")]
-    public ActionResult<Car> Insert(Car car)
+    public ActionResult<Car> Insert(CarDTO carDTO)
     {
+        Car car = new Car
+        {
+            Id = Guid.NewGuid(),
+            Brand = carDTO.Brand,
+            Model = carDTO.Model,
+            Category = carDTO.Category,
+            DateCreated = carDTO.DateCreated,
+            StandartColor = carDTO.StandartColor,
+            Count = carDTO.Count,
+            Price = carDTO.Price
+        };
         bool result = _carService.Insert(car);
         if (result) return Ok(car);
         return BadRequest();

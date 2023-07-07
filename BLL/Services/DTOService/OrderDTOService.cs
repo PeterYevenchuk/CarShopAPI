@@ -1,13 +1,14 @@
 ﻿using CarShop.Data_Access_Layer;
 using DAL.Db;
 using DAL.Models;
+using DAL.Models.ModelsDTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.Services.SearchingServices;
+namespace BLL.Services.DTOService;
 
 public class OrderDTOService : IService<OrderDTO>
 {
@@ -47,7 +48,7 @@ public class OrderDTOService : IService<OrderDTO>
                 return false;
             }
 
-            var additionalFunctionality = new AdditionalFunctionality
+            var additionalFunctionality = new AddFunc
             {
                 Id = Guid.NewGuid(),
                 Color = entity.AdditionalFunctionalityDTO.Color,

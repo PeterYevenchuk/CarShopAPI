@@ -4,6 +4,7 @@ using BLL.Helpers.PasswordValidation;
 using BLL.Services.ChangePasswordServices;
 using DAL.Db;
 using DAL.Models;
+using DAL.Models.ModelsDTO;
 using DAL.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -42,20 +43,25 @@ public class UserController : ControllerBase
     }
 
     [HttpPost("save")]
-    public ActionResult Insert(User user)
+    public ActionResult Insert(UserDTO userDTO)
     {
-        if (PasswordValid.IsValidatePassword(user.Password))
+        if (PasswordValid.IsValidatePassword(userDTO.Password) && EmailValid.IsValidEmail(userDTO.Email))
         {
-            user.Password = _hasher.EncryptPassword(user.Password, user.Id.ToByteArray());
-            if (EmailValid.IsValidEmail(user.Email))
+            User user = new User
             {
-                bool result = _userService.Insert(user);
-                if (result) return Ok();
-                return BadRequest();
-            }
-            return StatusCode(500, "Email write not correct!");
+                Id = Guid.NewGuid(),
+                Name = userDTO.Name,
+                LastName = userDTO.LastName,
+                Login = userDTO.Login,
+                Password = userDTO.Password,
+                Email = userDTO.Email
+            };
+            user.Password = _hasher.EncryptPassword(user.Password, user.Id.ToByteArray());
+            bool result = _userService.Insert(user);
+            if (result) return Ok();
+            return BadRequest();
         }
-        return StatusCode(500, "Password write not correct!");
+        return StatusCode(500, "Password or email write not correct!");
     }
 
     [HttpPut("update")]
