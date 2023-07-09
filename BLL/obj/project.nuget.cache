@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wZ6Y6AjsPNP76R8KrvH35XQ7HumXyCqIji4csmmeUfacbYbDMQ+uKy9LQKI/y99qsiPGpjYlOnhxjUyc/T4Ptg==",
+  "dgSpecHash": "0KJOpYTpwcFJDArL6iRY10DupHhGmaxB/23DqD/02Pp6e1qlPzdUeOEihAKlqZfQZeZQl7HkRSRcukSkPfZfKw==",
   "success": true,
-  "projectFilePath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\BLL.csproj",
+  "projectFilePath": "D:\\GitHubRepo\\PeterYevenchuk\\CarShopAPI\\BLL\\BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\petro\\.nuget\\packages\\dotnetenv\\2.5.0\\dotnetenv.2.5.0.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

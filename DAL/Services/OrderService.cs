@@ -72,7 +72,6 @@ public class OrderService : IService<Order>
         var existingOrder = _context.Orders.FirstOrDefault(a => a.Id == entity.Id);
         if (existingOrder != null)
         {
-            existingOrder.CountCars = entity.CountCars;
             existingOrder.TotalPrice = entity.TotalPrice;
             existingOrder.Car = entity.Car;
             existingOrder.User = entity.User;

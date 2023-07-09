@@ -6620,11 +6620,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\DAL.csproj",
+      "projectUniqueName": "D:\\GitHubRepo\\PeterYevenchuk\\CarShopAPI\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\DAL.csproj",
+      "projectPath": "D:\\GitHubRepo\\PeterYevenchuk\\CarShopAPI\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\petro\\.nuget\\packages\\",
-      "outputPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\obj\\",
+      "outputPath": "D:\\GitHubRepo\\PeterYevenchuk\\CarShopAPI\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6639,7 +6639,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6727,7 +6726,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

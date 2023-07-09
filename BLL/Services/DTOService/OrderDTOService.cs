@@ -42,11 +42,13 @@ public class OrderDTOService : IService<OrderDTO>
         {
             var car = _context.Cars.FirstOrDefault(c => c.Id == entity.CarId);
             var user = _context.Users.FirstOrDefault(u => u.Id == entity.UserId);
+            var addFuncPrice = _context.AdditionalFunctionalityPrices.FirstOrDefault(a => a.CarId == entity.CarId);
 
-            if (car == null || user == null)
-            {
-                return false;
-            }
+            if (car == null || user == null || addFuncPrice == null) return false;
+
+            car.Count--;
+            _context.SaveChanges();
+            decimal totalPrice = car.Price;
 
             var additionalFunctionality = new AddFunc
             {
@@ -58,11 +60,16 @@ public class OrderDTOService : IService<OrderDTO>
                 LeatherSeats = entity.AdditionalFunctionalityDTO.LeatherSeats
             };
 
+            if (additionalFunctionality.Color != null) totalPrice += addFuncPrice.ColorPrice;
+            if (additionalFunctionality.GPSNavigation == true) totalPrice += addFuncPrice.GPSNavigationPrice;
+            if (additionalFunctionality.ParkingSensors == true) totalPrice += addFuncPrice.ParkingSensorsPrice;
+            if (additionalFunctionality.PremiumSoundSystem == true) totalPrice += addFuncPrice.PremiumSoundSystemPrice;
+            if (additionalFunctionality.LeatherSeats == true) totalPrice += addFuncPrice.LeatherSeatsPrice;
+
             var order = new Order
             {
                 Id = Guid.NewGuid(),
-                CountCars = entity.CountCars,
-                TotalPrice = entity.TotalPrice,
+                TotalPrice = totalPrice,
                 DateOrdered = DateTime.Now,
                 Car = car,
                 User = user,

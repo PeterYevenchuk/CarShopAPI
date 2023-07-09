@@ -11,6 +11,4 @@ public class OrderDTO
     public Guid? CarId { get; set; }
     public Guid? UserId { get; set; }
     public AddFuncDTO AdditionalFunctionalityDTO { get; set; }
-    public int CountCars { get; set; }
-    public decimal TotalPrice { get; set; }
 }

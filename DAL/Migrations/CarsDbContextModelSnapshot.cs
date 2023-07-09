@@ -17,7 +17,7 @@ namespace DAL.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.8");
 
-            modelBuilder.Entity("DAL.Models.AdditionalFunctionality", b =>
+            modelBuilder.Entity("DAL.Models.AddFunc", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -43,7 +43,7 @@ namespace DAL.Migrations
                     b.ToTable("AdditionalFunctionalities");
                 });
 
-            modelBuilder.Entity("DAL.Models.AdditionalFunctionalityPrice", b =>
+            modelBuilder.Entity("DAL.Models.AddFuncPrice", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -135,7 +135,6 @@ namespace DAL.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("StandartColor")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -177,9 +176,6 @@ namespace DAL.Migrations
                     b.Property<Guid?>("CarId")
                         .IsRequired()
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("CountCars")
-                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("DateOrdered")
                         .HasColumnType("TEXT");
@@ -233,7 +229,7 @@ namespace DAL.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("DAL.Models.AdditionalFunctionalityPrice", b =>
+            modelBuilder.Entity("DAL.Models.AddFuncPrice", b =>
                 {
                     b.HasOne("DAL.Models.Car", "Car")
                         .WithMany()
@@ -257,7 +253,7 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("DAL.Models.Order", b =>
                 {
-                    b.HasOne("DAL.Models.AdditionalFunctionality", "AdditionalFunctionality")
+                    b.HasOne("DAL.Models.AddFunc", "AdditionalFunctionality")
                         .WithMany()
                         .HasForeignKey("AdditionalFunctionalityId")
                         .OnDelete(DeleteBehavior.Restrict)

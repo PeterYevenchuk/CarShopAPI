@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace BLL.Services.DTOService;
 
-public class AddlFuncPriceDTOService : IService<AddFuncPriceDTO>
+public class AddFuncPriceDTOService : IService<AddFuncPriceDTO>
 {
     private readonly IService<AddFuncPrice> _additionalFunctionalityPriceService;
     private readonly CarsDbContext _context;
 
-    public AddlFuncPriceDTOService(IService<AddFuncPrice> additionalFunctionalityPriceService, CarsDbContext context)
+    public AddFuncPriceDTOService(IService<AddFuncPrice> additionalFunctionalityPriceService, CarsDbContext context)
     {
         _additionalFunctionalityPriceService = additionalFunctionalityPriceService;
         _context = context;

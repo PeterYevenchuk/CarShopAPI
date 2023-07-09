@@ -18,6 +18,7 @@ public static class ServiceCollectionExt
     public static IServiceCollection AddBLLServices(this IServiceCollection services)
     {
         services.AddScoped<IPasswordHash, PasswordHash>();
+        services.AddScoped<IService<AddFuncPriceDTO>, AddFuncPriceDTOService>();
         services.AddScoped<IService<OrderDTO>, OrderDTOService>();
         services.AddScoped<IService<CarPhotoDTO>, CarPhotoDTOService>();
         services.AddScoped<SearchingUserService>();
