@@ -1,6 +1,5 @@
 using BLL.Extentions;
 using CarShop.Data_Access_Layer;
-using CarShopAPI.Models;
 using DAL.Db;
 using DotNetEnv;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -15,33 +14,6 @@ using (var context = new CarsDbContext())
 {
     context.Database.Migrate();
 }
-
-/*builder.Services.Configure<JWTSettings>(builder.Configuration.GetSection("JWTSettings"));
-
-var secretKey = builder.Configuration.GetSection("JWTSettings:SecretKey").Value;
-var issuer = builder.Configuration.GetSection("JWTSettings:Issuer").Value;
-var audience = builder.Configuration.GetSection("JWTSettings:Audience").Value;
-var signingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
-
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-.AddJwtBearer(options =>
-{
-    options.TokenValidationParameters = new TokenValidationParameters
-    {
-        ValidateIssuer = true,
-        ValidIssuer = issuer,
-        ValidateAudience = true,
-        ValidAudience = audience,
-        ValidateLifetime = true,
-        IssuerSigningKey = signingKey,
-        ValidateIssuerSigningKey = true
-    };
-});*/
 
 // Add services to the container.
 builder.Services.AddDALServices();

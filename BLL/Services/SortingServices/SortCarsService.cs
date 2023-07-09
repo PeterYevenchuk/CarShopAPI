@@ -39,6 +39,6 @@ public class SortCarsService
 
     public List<Car> GetCarsSortedByPrice()
     {
-        return _context.Cars.OrderBy(c => Convert.ToDouble(c.Price)).ToList();
+        return _context.Cars.OrderBy(c => (double)c.Price).ToList();
     }
 }

@@ -17,10 +17,18 @@ public class SearchingOrderController : ControllerBase
         _searchingOrderService = searchingOrderService;
     }
 
-    [HttpGet("{iduser}")]
+    [HttpGet("id")]
     public ActionResult<Order> GetByIdUser(Guid idUser)
     {
         Order order = _searchingOrderService.SearchOrderByUserId(idUser);
+        if (order != null) return Ok(order);
+        return NotFound();
+    }
+
+    [HttpGet("carid")]
+    public ActionResult<Order> GetByIdCar(Guid idCar)
+    {
+        Order order = _searchingOrderService.SearchOrderByCarId(idCar);
         if (order != null) return Ok(order);
         return NotFound();
     }
