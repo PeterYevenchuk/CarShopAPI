@@ -140,3 +140,5 @@ D:\GitHubRepo\PeterYevenchuk\CarShopAPI\BLL\obj\Debug\net7.0\refint\BLL.dll
 D:\GitHubRepo\PeterYevenchuk\CarShopAPI\BLL\obj\Debug\net7.0\BLL.pdb
 D:\GitHubRepo\PeterYevenchuk\CarShopAPI\BLL\obj\Debug\net7.0\BLL.genruntimeconfig.cache
 D:\GitHubRepo\PeterYevenchuk\CarShopAPI\BLL\obj\Debug\net7.0\ref\BLL.dll
+D:\MyCodeC#.NET\Git\CarShopAPI\BLL\bin\Debug\net7.0\SendGrid.dll
+D:\MyCodeC#.NET\Git\CarShopAPI\BLL\bin\Debug\net7.0\StarkbankEcdsa.dll

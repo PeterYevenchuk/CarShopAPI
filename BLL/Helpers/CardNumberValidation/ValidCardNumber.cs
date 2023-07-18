@@ -1,20 +1,14 @@
-﻿namespace BLL.Services.PaymentSystem;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class CreditCardPaymentStrategy : IPaymentStrategy
+namespace BLL.Helpers.CardNumberValidation;
+
+public class ValidCardNumber
 {
-    public string ProcessPayment(decimal amount, string cardNumber)
-    {
-        if (ValidCardNumber(cardNumber))
-        {
-            return $"Payment of {amount} via Credit Card processed successfully.";
-        }
-        else
-        {
-            return $"The payment did not go through, the card number {cardNumber} is incorrect!";
-        }
-    }
-
-    private bool ValidCardNumber(string cardNumber)
+    public static bool ValidNumCard(string cardNumber)
     {
         int sum = 0;
         bool isSecondDigit = false;

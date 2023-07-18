@@ -130,3 +130,5 @@ D:\GitHubRepo\PeterYevenchuk\CarShopAPI\DAL\obj\Debug\net7.0\refint\DAL.dll
 D:\GitHubRepo\PeterYevenchuk\CarShopAPI\DAL\obj\Debug\net7.0\DAL.pdb
 D:\GitHubRepo\PeterYevenchuk\CarShopAPI\DAL\obj\Debug\net7.0\DAL.genruntimeconfig.cache
 D:\GitHubRepo\PeterYevenchuk\CarShopAPI\DAL\obj\Debug\net7.0\ref\DAL.dll
+D:\MyCodeC#.NET\Git\CarShopAPI\DAL\bin\Debug\net7.0\SendGrid.dll
+D:\MyCodeC#.NET\Git\CarShopAPI\DAL\bin\Debug\net7.0\StarkbankEcdsa.dll

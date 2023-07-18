@@ -184,3 +184,5 @@ D:\GitHubRepo\PeterYevenchuk\CarShopAPI\CarShopAPI\obj\Debug\net7.0\refint\CarSh
 D:\GitHubRepo\PeterYevenchuk\CarShopAPI\CarShopAPI\obj\Debug\net7.0\CarShopAPI.pdb
 D:\GitHubRepo\PeterYevenchuk\CarShopAPI\CarShopAPI\obj\Debug\net7.0\CarShopAPI.genruntimeconfig.cache
 D:\GitHubRepo\PeterYevenchuk\CarShopAPI\CarShopAPI\obj\Debug\net7.0\ref\CarShopAPI.dll
+D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\SendGrid.dll
+D:\MyCodeC#.NET\Git\CarShopAPI\CarShopAPI\bin\Debug\net7.0\StarkbankEcdsa.dll
