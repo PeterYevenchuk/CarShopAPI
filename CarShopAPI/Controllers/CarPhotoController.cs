@@ -2,6 +2,7 @@
 using DAL.Models;
 using DAL.Models.ModelsDTO;
 using DAL.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarShopAPI.Controllers;
@@ -34,6 +35,7 @@ public class CarPhotoController : ControllerBase
         return NotFound();
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpPost("save")]
     public ActionResult<CarPhoto> Insert(CarPhotoDTO carPhoto)
     {
@@ -42,6 +44,7 @@ public class CarPhotoController : ControllerBase
         return BadRequest();
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpPut("update")]
     public ActionResult<CarPhoto> Update(CarPhoto carPhoto)
     {
@@ -50,6 +53,7 @@ public class CarPhotoController : ControllerBase
         return BadRequest();
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpDelete("delete")]
     public ActionResult<CarPhoto> Delete(Guid id)
     {

@@ -6,6 +6,7 @@ using DAL.Db;
 using DAL.Models;
 using DAL.Models.ModelsDTO;
 using DAL.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarShopAPI.Controllers;
@@ -39,6 +40,7 @@ public class AddFuncPriceController : ControllerBase
         return NotFound();
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpPost("save")]
     public ActionResult<AddFuncPrice> Insert(AddFuncPriceDTO additionalFunctionalityPriceDTO)
     {
@@ -47,6 +49,7 @@ public class AddFuncPriceController : ControllerBase
         return BadRequest();
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpPut("update")]
     public ActionResult<AddFuncPrice> Update(AddFuncPrice addFuncPrice)
     {
@@ -55,6 +58,7 @@ public class AddFuncPriceController : ControllerBase
         return BadRequest();
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpDelete("delete")]
     public ActionResult<AddFuncPrice> Delete(Guid id)
     {

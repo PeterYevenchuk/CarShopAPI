@@ -4,12 +4,12 @@
     "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\CarShopAPI\\CarShopAPI.csproj": {}
   },
   "projects": {
-    "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\BLL.csproj": {
+    "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\CarShop.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\BLL.csproj",
-        "projectName": "BLL",
-        "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\BLL.csproj",
+        "projectUniqueName": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\CarShop.BLL.csproj",
+        "projectName": "CarShop.BLL",
+        "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\CarShop.BLL.csproj",
         "packagesPath": "C:\\Users\\petro\\.nuget\\packages\\",
         "outputPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\obj\\",
         "projectStyle": "PackageReference",
@@ -33,8 +33,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\DAL.csproj"
+              "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\CarShop.DAL.csproj": {
+                "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\CarShop.DAL.csproj"
               }
             }
           }
@@ -155,11 +155,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\BLL.csproj": {
-                "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\BLL.csproj"
+              "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\CarShop.BLL.csproj": {
+                "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\CarShop.BLL.csproj"
               },
-              "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\DAL.csproj"
+              "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\CarShop.DAL.csproj": {
+                "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\CarShop.DAL.csproj"
               }
             }
           }
@@ -262,12 +262,12 @@
         }
       }
     },
-    "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\DAL.csproj": {
+    "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\CarShop.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\DAL.csproj",
-        "projectName": "DAL",
-        "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\CarShop.DAL.csproj",
+        "projectName": "CarShop.DAL",
+        "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\CarShop.DAL.csproj",
         "packagesPath": "C:\\Users\\petro\\.nuget\\packages\\",
         "outputPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\obj\\",
         "projectStyle": "PackageReference",

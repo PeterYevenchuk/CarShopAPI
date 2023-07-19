@@ -14,7 +14,7 @@ public class Car
     public string Model{ get; set; }
     public string Category { get; set; }
     public string DateCreated { get; set; }
-    public string? StandartColor { get; set; }
+    public string StandartColor { get; set; }
     public int Count { get; set; }
     public decimal Price { get; set; }
 }

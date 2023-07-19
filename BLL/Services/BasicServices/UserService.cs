@@ -69,9 +69,12 @@ public class UserService : IService<User>
             var user = _context.Users.FirstOrDefault(a => a.Id == entity.Id);
             if (user != null)
             {
+                user.Name = entity.Name;
+                user.LastName = entity.LastName;
                 user.Login = entity.Login;
-                user.Password = entity.Password;
                 user.Email = entity.Email;
+                user.PhoneNumber = entity.PhoneNumber;
+                user.Role = entity.Role;
                 _context.SaveChanges();
                 return true;
             }

@@ -2,6 +2,7 @@
 using DAL.Models;
 using DAL.Models.ModelsDTO;
 using DAL.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarShopAPI.Controllers;
@@ -34,6 +35,7 @@ public class OrderController : ControllerBase
         return NotFound();
     }
 
+    [Authorize(Roles = "User")]
     [HttpPost("save")]
     public ActionResult<Order> Insert(OrderDTO order)
     {
@@ -42,6 +44,8 @@ public class OrderController : ControllerBase
         return BadRequest();
     }
 
+    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "User")]
     [HttpPut("update")]
     public ActionResult<Order> Update(Order order)
     {
@@ -50,6 +54,7 @@ public class OrderController : ControllerBase
         return BadRequest();
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpDelete("delete")]
     public ActionResult<Order> Delete(Guid id)
     {

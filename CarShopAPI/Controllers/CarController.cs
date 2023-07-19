@@ -2,12 +2,13 @@
 using DAL.Models;
 using DAL.Models.ModelsDTO;
 using DAL.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarShopAPI.Controllers;
 
 [ApiController]
-[Route("api/controller")]
+[Route("api/[controller]")]
 public class CarController : ControllerBase
 {
     private readonly IService<Car> _carService;
@@ -33,6 +34,7 @@ public class CarController : ControllerBase
     }
 
     [HttpPost("save")]
+    [Authorize(Roles = "Admin")]
     public ActionResult<Car> Insert(CarDTO carDTO)
     {
         Car car = new Car
@@ -52,6 +54,7 @@ public class CarController : ControllerBase
     }
 
     [HttpPut("update")]
+    [Authorize(Roles = "Admin")]
     public ActionResult<Car> Update(Car car)
     {
         bool result = _carService.Update(car);
@@ -60,6 +63,7 @@ public class CarController : ControllerBase
     }
 
     [HttpDelete("delete")]
+    [Authorize(Roles = "Admin")]
     public ActionResult<Car> Delete(Guid id)
     {
         bool result = _carService.Delete(id);

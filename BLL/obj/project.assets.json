@@ -47,6 +47,19 @@
           }
         }
       },
+      "Microsoft.AspNet.Identity.Core/2.2.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.8": {
         "type": "package",
         "dependencies": {
@@ -2149,7 +2162,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "DAL/1.0.0": {
+      "CarShop.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -2166,10 +2179,10 @@
           "System.IdentityModel.Tokens.Jwt": "6.31.0"
         },
         "compile": {
-          "bin/placeholder/DAL.dll": {}
+          "bin/placeholder/CarShop.DAL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DAL.dll": {}
+          "bin/placeholder/CarShop.DAL.dll": {}
         }
       }
     }
@@ -2233,6 +2246,19 @@
         "lib/netstandard2.0/JWT.dll",
         "lib/netstandard2.0/JWT.pdb",
         "lib/netstandard2.0/JWT.xml"
+      ]
+    },
+    "Microsoft.AspNet.Identity.Core/2.2.4": {
+      "sha512": "s3u/o3iG5h0z7Ggukwo4soPwogD56ZrYbolGxTfw41zkuG6jAXUJT/V3EThqHJXGuCNvWSdSnnwAhPfT9Sn36g==",
+      "type": "package",
+      "path": "microsoft.aspnet.identity.core/2.2.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.AspNet.Identity.Core.dll",
+        "lib/net45/Microsoft.AspNet.Identity.Core.xml",
+        "microsoft.aspnet.identity.core.2.2.4.nupkg.sha512",
+        "microsoft.aspnet.identity.core.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.8": {
@@ -6684,17 +6710,18 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "DAL/1.0.0": {
+    "CarShop.DAL/1.0.0": {
       "type": "project",
-      "path": "../DAL/DAL.csproj",
-      "msbuildProject": "../DAL/DAL.csproj"
+      "path": "../DAL/CarShop.DAL.csproj",
+      "msbuildProject": "../DAL/CarShop.DAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "DAL >= 1.0.0",
+      "CarShop.DAL >= 1.0.0",
       "DotNetEnv >= 2.5.0",
       "JWT >= 10.0.2",
+      "Microsoft.AspNet.Identity.Core >= 2.2.4",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.8",
       "Microsoft.AspNetCore.Cryptography.KeyDerivation >= 7.0.8",
       "Microsoft.EntityFrameworkCore >= 7.0.8",
@@ -6715,9 +6742,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\BLL.csproj",
-      "projectName": "BLL",
-      "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\BLL.csproj",
+      "projectUniqueName": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\CarShop.BLL.csproj",
+      "projectName": "CarShop.BLL",
+      "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\CarShop.BLL.csproj",
       "packagesPath": "C:\\Users\\petro\\.nuget\\packages\\",
       "outputPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\BLL\\obj\\",
       "projectStyle": "PackageReference",
@@ -6741,8 +6768,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\DAL.csproj": {
-              "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\DAL.csproj"
+            "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\CarShop.DAL.csproj": {
+              "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\CarShop.DAL.csproj"
             }
           }
         }
@@ -6764,6 +6791,10 @@
           "JWT": {
             "target": "Package",
             "version": "[10.0.2, )"
+          },
+          "Microsoft.AspNet.Identity.Core": {
+            "target": "Package",
+            "version": "[2.2.4, )"
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
@@ -6833,5 +6864,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Identity.Core 2.2.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Identity.Core",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

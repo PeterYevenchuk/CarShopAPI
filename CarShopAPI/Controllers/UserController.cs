@@ -6,6 +6,7 @@ using DAL.Db;
 using DAL.Models;
 using DAL.Models.ModelsDTO;
 using DAL.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarShopAPI.Controllers;
@@ -45,7 +46,8 @@ public class UserController : ControllerBase
     [HttpPost("save")]
     public ActionResult Insert(UserDTO userDTO)
     {
-        if (PasswordValid.IsValidatePassword(userDTO.Password) && EmailValid.IsValidEmail(userDTO.Email))
+        if (PasswordValid.IsValidatePassword(userDTO.Password) && EmailValid.IsValidEmail(userDTO.Email) && 
+            (userDTO.Role == RoleType.Admin || userDTO.Role == RoleType.User))
         {
             User user = new User
             {
@@ -54,16 +56,20 @@ public class UserController : ControllerBase
                 LastName = userDTO.LastName,
                 Login = userDTO.Login,
                 Password = userDTO.Password,
-                Email = userDTO.Email
+                Email = userDTO.Email,
+                PhoneNumber = userDTO.PhoneNumber,
+                Role = userDTO.Role
             };
             user.Password = _hasher.EncryptPassword(user.Password, user.Id.ToByteArray());
             bool result = _userService.Insert(user);
             if (result) return Ok();
             return BadRequest();
         }
-        return StatusCode(500, "Password or email write not correct!");
+        return StatusCode(500, "Password, role or email write not correct!");
     }
 
+    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "User")]
     [HttpPut("update")]
     public ActionResult Update(User user)
     {
@@ -76,6 +82,8 @@ public class UserController : ControllerBase
         return BadRequest();
     }
 
+    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "User")]
     [HttpPut("changepassword")]
     public ActionResult ChangePassword(Guid id, string newPassword, string oldPassword)
     {
@@ -91,6 +99,8 @@ public class UserController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "User")]
     public ActionResult Delete(Guid id)
     {
         bool result = _userService.Delete(id);

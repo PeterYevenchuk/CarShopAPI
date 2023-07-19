@@ -6686,9 +6686,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\DAL.csproj",
-      "projectName": "DAL",
-      "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\DAL.csproj",
+      "projectUniqueName": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\CarShop.DAL.csproj",
+      "projectName": "CarShop.DAL",
+      "projectPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\CarShop.DAL.csproj",
       "packagesPath": "C:\\Users\\petro\\.nuget\\packages\\",
       "outputPath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\obj\\",
       "projectStyle": "PackageReference",

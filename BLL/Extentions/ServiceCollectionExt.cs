@@ -6,7 +6,9 @@ using BLL.Services.DTOService;
 using BLL.Services.NotificationServices;
 using BLL.Services.PaymentSystem;
 using BLL.Services.SearchingServices;
+using CarShop.BLL.Services.BasicServices;
 using DAL.Db;
+using DAL.Models;
 using DAL.Models.ModelsDTO;
 using DAL.Services;
 using DAL.Services.SortingServices;
@@ -18,6 +20,11 @@ public static class ServiceCollectionExt
 {
     public static IServiceCollection AddBLLServices(this IServiceCollection services)
     {
+        services.AddScoped<IService<User>, UserService>();
+        services.AddScoped<IService<Car>, CarService>();
+        services.AddScoped<IService<Order>, OrderService>();
+        services.AddScoped<IService<CarPhoto>, CarPhotoService>();
+        services.AddScoped<IService<AddFuncPrice>, AddFuncPriceService>();
         services.AddScoped<IPaymentStrategy, CreditCardPaymentStrategy>();
         services.AddScoped<IPaymentStrategy, PayPalPaymentStrategy>();
         services.AddScoped<IPasswordHash, PasswordHash>();
@@ -30,6 +37,7 @@ public static class ServiceCollectionExt
         services.AddScoped<ChangeUserPasswordService>();
         services.AddScoped<SortCarsService>();
         services.AddScoped<EmailService>();
+        services.AddScoped<AuthService>();
 
         return services;
     }

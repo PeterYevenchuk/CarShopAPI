@@ -1,4 +1,5 @@
 ﻿using BLL.Services.PaymentSystem;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarShopAPI.Controllers;
@@ -16,6 +17,8 @@ public class PaymentController : ControllerBase
         _logger = logger;
     }
 
+    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "User")]
     [HttpPost("credit-card")]
     public IActionResult ProcessCreditCardPayment(decimal amount, string cardNumber)
     {
@@ -32,6 +35,8 @@ public class PaymentController : ControllerBase
         }
     }
 
+    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "User")]
     [HttpPost("paypal")]
     public IActionResult ProcessPayPalPayment(decimal amount, string payPalMail)
     {

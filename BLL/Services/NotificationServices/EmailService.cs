@@ -42,7 +42,7 @@ public class EmailService
         return response.IsSuccessStatusCode;
     }
 
-    private async Task<bool> CheckEmailExist(string email)
+    public async Task<bool> CheckEmailExist(string email)
     {
         var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
         return user != null;

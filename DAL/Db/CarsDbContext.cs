@@ -24,9 +24,9 @@ public class CarsDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        // Foreign key for table CarPhoto
+        // Foreign key for CarPhoto table 
         modelBuilder.Entity<CarPhoto>()
-            .HasOne(p => p.Car)
+            .HasOne(o => o.Car)
             .WithMany()
             .HasForeignKey("CarId")
             .OnDelete(DeleteBehavior.Cascade);

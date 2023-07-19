@@ -24,6 +24,16 @@ public class SearchingUserService
         return _context.Users.Where(a => a.Login == login).ToList();
     }
 
+    public List<User> SearchUserByNumber(string phoneNumber)
+    {
+        return _context.Users.Where(a => a.PhoneNumber == phoneNumber).ToList();
+    }
+
+    public List<User> SearchUserByRole(RoleType role)
+    {
+        return _context.Users.Where(a => a.Role == role).ToList();
+    }
+
     public List<User> SearchUserByEmail(string email)
     {
         if (EmailValid.IsValidEmail(email))

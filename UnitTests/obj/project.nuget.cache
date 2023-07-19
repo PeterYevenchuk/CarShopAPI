@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VNH5ZNM4sLwzjwuFyD3DppLKlWnlcSapSsLTGAgsd+lMx8jaLiDmOual/ZDHpqi2unIiJbFjhbYhPEyxg5PGrA==",
+  "dgSpecHash": "jjdXFQvheiGoMF6m/jxz+SMRisbPv7cxaeHb32zDP6169bpsa+ql/QfrUg977cP6Z6pqOUYX4ro/6dWftkp6KA==",
   "success": true,
-  "projectFilePath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\UnitTests\\UnitTests.csproj",
+  "projectFilePath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\UnitTests\\CarShop.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\petro\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\dotnetenv\\2.5.0\\dotnetenv.2.5.0.nupkg.sha512",

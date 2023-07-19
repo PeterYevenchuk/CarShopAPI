@@ -8,6 +8,7 @@ public class CreditCardPaymentStrategy : IPaymentStrategy
     {
         if (ValidCardNumber.ValidNumCard(cardNumber))
         {
+            // connect to bank Api if all goot return this
             return $"Payment of {amount} via Credit Card processed successfully.";
         }
         else

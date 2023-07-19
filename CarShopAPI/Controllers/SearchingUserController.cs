@@ -23,6 +23,22 @@ public class SearchingUserController : ControllerBase
         return NotFound();
     }
 
+    [HttpGet("phone-number")]
+    public ActionResult<List<User>> GetByPhoneNumber(string number)
+    {
+        var user = _searchingUserService.SearchUserByNumber(number);
+        if (user != null) return Ok(user);
+        return NotFound();
+    }
+
+    [HttpGet("role")]
+    public ActionResult<List<User>> GetByRole(RoleType role)
+    {
+        var user = _searchingUserService.SearchUserByRole(role);
+        if (user != null) return Ok(user);
+        return NotFound();
+    }
+
     [HttpGet("email")]
     public ActionResult<List<User>> GetByEmail(string email)
     {

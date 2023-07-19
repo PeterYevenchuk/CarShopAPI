@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c9eCF7T5stigh7qUsKDr2rGfsHshF4dkl4/nlCVC7UcygseAhV7hGiv89aYCMTyILh72jFJ4nZCo3r8H0tjZfA==",
+  "dgSpecHash": "ZQyGo0zcWjmfkiux+GLWx5yNqPYOyjwY9YTih+OHXWy3PDp5FHxhFsX0PReaQb6VWUdFYh65g4LWYES0g+l8Jg==",
   "success": true,
-  "projectFilePath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\DAL.csproj",
+  "projectFilePath": "D:\\MyCodeC#.NET\\Git\\CarShopAPI\\DAL\\CarShop.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\petro\\.nuget\\packages\\dotnetenv\\2.5.0\\dotnetenv.2.5.0.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

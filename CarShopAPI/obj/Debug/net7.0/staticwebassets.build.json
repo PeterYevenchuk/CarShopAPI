@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "6deCyedTa6FJ3+vhvIg6qPO8x4aRXLIpVW6j0hCeixQ=",
-  "Source": "CarShopAPI",
-  "BasePath": "_content/CarShopAPI",
+  "Hash": "QS7fB3bDUwVNj1G1kKyA4jLyqtP0JnqnK1pFbY1IHog=",
+  "Source": "CarShop.API",
+  "BasePath": "_content/CarShop.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

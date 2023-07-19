@@ -8,6 +8,7 @@ public class PayPalPaymentStrategy : IPaymentStrategy
     {
         if (EmailValid.IsValidEmail(payPalMail))
         {
+            // connect to pay pal Api if all goot return this
             return $"Payment of {amount} via PayPal processed successfully.";
         }
         else
