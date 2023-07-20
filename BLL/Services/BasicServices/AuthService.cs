@@ -13,7 +13,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace CarShop.BLL.Services.BasicServices
 {
-    public class AuthService
+    public class AuthService : IAuthService
     {
         private readonly CarsDbContext _context;
         private readonly string _sendGridApiKey;

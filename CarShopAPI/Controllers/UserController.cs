@@ -2,6 +2,7 @@
 using BLL.Helpers.PasswordHasher;
 using BLL.Helpers.PasswordValidation;
 using BLL.Services.ChangePasswordServices;
+using CarShop.BLL.Services.ChangePasswordServices;
 using DAL.Db;
 using DAL.Models;
 using DAL.Models.ModelsDTO;
@@ -15,11 +16,11 @@ namespace CarShopAPI.Controllers;
 [Route("api/[controller]")]
 public class UserController : ControllerBase
 {
-    private readonly ChangeUserPasswordService _changeUserPasswordService;
+    private readonly IChangeUserPasswordService _changeUserPasswordService;
     private readonly IService<User> _userService;
     private readonly IPasswordHash _hasher;
 
-    public UserController(IService<User> userService, IPasswordHash hasher, ChangeUserPasswordService changeUserPasswordService)
+    public UserController(IService<User> userService, IPasswordHash hasher, IChangeUserPasswordService changeUserPasswordService)
     {
         _userService = userService;
         this._hasher = hasher;

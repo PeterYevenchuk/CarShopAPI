@@ -33,7 +33,6 @@
   <ItemGroup>
     <ProjectReference Include="..\BLL\CarShop.BLL.csproj" />
     <ProjectReference Include="..\DAL\CarShop.DAL.csproj" />
-    <ProjectReference Include="..\UnitTests\CarShop.UnitTests.csproj" />
   </ItemGroup>
 
 </Project>

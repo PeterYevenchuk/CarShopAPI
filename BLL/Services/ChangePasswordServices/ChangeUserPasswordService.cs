@@ -1,4 +1,5 @@
-﻿using CarShop.Data_Access_Layer;
+﻿using CarShop.BLL.Services.ChangePasswordServices;
+using CarShop.Data_Access_Layer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Services.ChangePasswordServices;
 
-public class ChangeUserPasswordService
+public class ChangeUserPasswordService : IChangeUserPasswordService
 {
     private readonly CarsDbContext _context;
 
